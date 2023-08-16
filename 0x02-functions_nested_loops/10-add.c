@@ -1,16 +1,11 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * main - check the code
- *
+ * add - adds two integers and returns the result
+ * @x: number being added
+ * @y: number being added
  * Return: Always 0.
  */
-int main(void)
+int add(int x, int y)
 {
-	int n;
-
-	n = add(89, 9);
-	printf("%d\n", n);
-	return (0);
+	return (x + y);
 }
