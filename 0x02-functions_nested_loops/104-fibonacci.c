@@ -1,26 +1,22 @@
 #include <stdio.h>
 /**
- * main - main block
- * Description: compute and prints the sum of all the multiples of 3 or
- * 5 below 1024 (excluded), folowed by a new line
- * Return: 0
+ * numLength - returns the lenght of string
+ * @num: operand number
+ * Return: numver of digits
  */
-int main(void)
+int numLength(int num)
 {
-	int i = 0;
-	unsigned long int a = 0, b = 1, next = 0;
+	int length = 0;
 
-	while (i < 98)
+	if (!num)
 	{
-		next = a + b;
-		a = b;
-		b = next;
-		printf("%lu", next);
-
-		if (i < 97)
-			printf(", ");
-		i++;
+		return (1);
 	}
-	putchar('\n');
-	return (0);
+	while (num)
+	{
+		num = num / 10;
+		length += 1;
+	}
+
+	return (length);
 }
